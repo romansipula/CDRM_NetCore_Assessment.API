@@ -1,0 +1,41 @@
+
+
+###
+POST http://localhost:5142/documents
+Content-Type: application/json; charset=UTF-8
+
+{
+  "id": "some-unique-identifier15",
+  "tags": ["important", ".net", "csharp"],
+  "data": {
+    "some": "new value",
+    "optional": "updated fields",
+    "extra": "added field"
+  }
+}
+
+###
+GET http://localhost:5142/documents/some-unique-identifier15
+Accept: application/xml
+
+###
+GET http://localhost:5142/documents/some-unique-identifier15
+Accept: application/x-msgpack
+
+###
+GET http://localhost:5142/documents/some-unique-identifier15
+
+
+###
+PUT http://localhost:5142/documents/some-unique-identifier15
+Content-Type: application/json; charset=UTF-8
+
+{
+  "id": "some-unique-identifier15",
+  "tags": ["updated", "important"],
+  "data": {
+    "some": "new value",
+    "optional": "updated fields",
+    "extra": "added field edited"
+  }
+}
