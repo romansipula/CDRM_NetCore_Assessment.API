@@ -1,0 +1,1 @@
+// ProtobufDocumentFormatter and DocumentProto removed. No protobuf references remain.
